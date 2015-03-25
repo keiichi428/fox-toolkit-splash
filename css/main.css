@@ -1,0 +1,567 @@
+/* HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+/* line 17, ../scss/main.scss */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+/* line 21, ../scss/main.scss */
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+/* line 32, ../scss/main.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 37, ../scss/main.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+/* line 46, ../scss/main.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+/* line 63, ../scss/main.scss */
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+/* line 71, ../scss/main.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+/* line 81, ../scss/main.scss */
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+/* line 89, ../scss/main.scss */
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+/* line 124, ../scss/main.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+/* line 132, ../scss/main.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+/* line 143, ../scss/main.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+/* line 152, ../scss/main.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+/* line 169, ../scss/main.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+/* line 182, ../scss/main.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 199, ../scss/main.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 204, ../scss/main.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 213, ../scss/main.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  /* line 240, ../scss/main.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 248, ../scss/main.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 252, ../scss/main.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 256, ../scss/main.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  /* line 266, ../scss/main.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 271, ../scss/main.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 276, ../scss/main.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  /* line 281, ../scss/main.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 285, ../scss/main.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 295, ../scss/main.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 301, ../scss/main.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/* --------------------------------------------------- 
+ 
+			Custom Style - 2014/08/24
+			keiichi+fox@tealab.com
+				
+ --------------------------------------------------- */
+/* line 323, ../scss/main.scss */
+html {
+  background: url(../img/background-sky.jpg) no-repeat;
+  background-size: cover;
+  background-color: #a5d2e6;
+}
+
+/* line 332, ../scss/main.scss */
+header {
+  width: 100%;
+  height: 82px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #2c5486;
+}
+/* line 337, ../scss/main.scss */
+header h1 {
+  display: inline-block;
+  margin: 14px;
+}
+/* line 340, ../scss/main.scss */
+header h1 a {
+  width: 100%;
+  height: auto;
+}
+/* line 343, ../scss/main.scss */
+header h1 a img {
+  margin-right: 10px;
+}
+
+/* line 350, ../scss/main.scss */
+select#title-selector {
+  float: right;
+  margin-right: 14px;
+  top: 50%;
+  position: relative;
+  font-size: 15px;
+  line-height: 19px;
+  margin-top: -11px;
+  height: 22px;
+}
+
+/* line 361, ../scss/main.scss */
+select#title-selector:focus #select-by-title {
+  display: none;
+}
+
+/* line 365, ../scss/main.scss */
+p#welcome {
+  color: #1d5598;
+  width: 50%;
+  max-width: 530px;
+  position: relative;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 25px;
+  margin-bottom: 22px;
+  font-size: 0.8em;
+  font-weight: bold;
+  line-height: 1.8em;
+}
+
+/* line 379, ../scss/main.scss */
+#contents {
+  position: relative;
+  top: 110px;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* line 387, ../scss/main.scss */
+#posters {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 393, ../scss/main.scss */
+li.poster {
+  display: inline-block;
+  list-style: none;
+  width: 23%;
+  min-width: 100px;
+  margin: 1%;
+}
+/* line 400, ../scss/main.scss */
+li.poster a img {
+  border: 1px solid #bfe2fb;
+  width: 100%;
+  height: auto;
+  transition: all 0.3s;
+}
+/* line 407, ../scss/main.scss */
+li.poster a:hover img {
+  border-color: white;
+  box-shadow: 0 0 4px white, 0 0 10px white, 0 0 20px white, 0 0 30px white;
+}
+
+/* line 420, ../scss/main.scss */
+#agreement {
+  color: #186f95;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+/* line 426, ../scss/main.scss */
+#agreement a {
+  color: #168fc2;
+}
+
+/* line 430, ../scss/main.scss */
+#legal-logo-fox {
+  width: 42px;
+  height: auto;
+  display: inline-block;
+  float: left;
+  clear: none;
+  margin-right: 10px;
+  position: relative;
+}
+
+/* line 439, ../scss/main.scss */
+#legalinclude-legal {
+  font-size: 10px;
+  display: inline;
+  float: left;
+  clear: none;
+  width: 90%;
+  color: #63b2d3;
+  position: relative;
+}
+
+/* line 449, ../scss/main.scss */
+#legalinclude-legal a {
+  color: #63b2d3;
+}
+
+@media all and (max-width: 920px), all and (max-height: 1050px) {
+  /* line 457, ../scss/main.scss */
+  header {
+    width: 100%;
+    height: 45px;
+  }
+
+  /* line 460, ../scss/main.scss */
+  p#welcome {
+    width: 70%;
+  }
+
+  /* line 464, ../scss/main.scss */
+  #contents {
+    top: 67px;
+  }
+
+  /* line 468, ../scss/main.scss */
+  header h1 {
+    margin: 5px;
+  }
+  /* line 470, ../scss/main.scss */
+  header h1 a img {
+    height: 35px;
+    width: auto;
+    vertical-align: top;
+  }
+
+  /* line 478, ../scss/main.scss */
+  select#title-selector {
+    margin-right: 5px;
+  }
+}
+@media all and (max-height: 1050px) {
+  /* line 484, ../scss/main.scss */
+  p#welcome {
+    padding: 15px;
+  }
+}
+/*@media all and (max-height:1050px) and (min-width: 1044px){
+	li.poster a img {
+		max-height: 33%;
+		width:auto;
+	}
+}*/
+@media all and (max-width: 630px) {
+  /* line 499, ../scss/main.scss */
+  header {
+    height: 75px;
+    text-align: center;
+  }
+  /* line 502, ../scss/main.scss */
+  header h1 {
+    margin: 5px;
+    width: initial;
+  }
+
+  /* line 508, ../scss/main.scss */
+  select#title-selector {
+    bottom: 15px;
+    top: -10px;
+    margin-top: 0;
+    float: inherit;
+  }
+
+  /* line 515, ../scss/main.scss */
+  p#welcome {
+    width: 90%;
+    padding: 4%;
+  }
+
+  /* line 520, ../scss/main.scss */
+  #contents {
+    top: 89px;
+    width: 98%;
+  }
+
+  /* line 525, ../scss/main.scss */
+  li.poster {
+    width: 48%;
+  }
+
+  /* line 529, ../scss/main.scss */
+  #legal-logo-fox {
+    display: block;
+    clear: both;
+    float: inherit;
+    margin: auto;
+  }
+
+  /* line 535, ../scss/main.scss */
+  #legalinclude-legal {
+    width: 100%;
+  }
+}
+@media all and (max-width: 420px) {
+  /* line 543, ../scss/main.scss */
+  header h1 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* line 549, ../scss/main.scss */
+  select#title-selector {
+    margin-top: 10px;
+  }
+
+  /* line 552, ../scss/main.scss */
+  #logo-fox {
+    width: 10%;
+    height: auto;
+    margin-right: 2%;
+  }
+
+  /* line 558, ../scss/main.scss */
+  #logo {
+    width: 82%;
+    height: auto;
+  }
+
+  /* line 563, ../scss/main.scss */
+  li.poster {
+    width: 97%;
+  }
+}
